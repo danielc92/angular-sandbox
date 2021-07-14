@@ -1,0 +1,7 @@
+<div class="todo">
+  <h3>{{ todoTitle }}</h3>
+  <p>{{ todoText }}</p>
+  <p>
+    <span *ngFor="let tag of todoTags" class="todo__tag">{{ tag }}</span>
+  </p>
+</div>
