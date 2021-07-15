@@ -4,19 +4,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodoComponent } from './todo/todo.component';
-import { LmaoComponent } from './lmao/lmao.component';
+import { AboutUsPageComponent } from './about-us-page/about-us-page.component';
+import { TodoListPageComponent } from './todo-list-page/todo-list-page.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoComponent,
-    LmaoComponent
+    AboutUsPageComponent,
+    TodoListPageComponent,
+    ProfileComponent,
+    ButtonComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
