@@ -6,9 +6,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./todo.component.scss'],
 })
 export class TodoComponent implements OnInit {
-  @Input() todoTitle = 'Default todo title';
-  @Input() todoText = 'Default todo text';
-  @Input() todoTags = ['default', 'tag', 'item', 'list'];
+  @Input() todoTitle: string = 'Default todo title';
+  @Input() todoText: string = 'Default todo text';
+  @Input() todoTags: string[] = ['default', 'tag', 'item', 'list'];
 
   constructor() {}
 
