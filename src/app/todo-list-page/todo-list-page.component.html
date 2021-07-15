@@ -1,5 +1,8 @@
 <section>
   <h1>Todo list page</h1>
-  <app-todo></app-todo>
-  <app-todo todoText="34" todoTitle="Laundry" [todoTags]="['clean']"></app-todo>
+  <app-todo
+    *ngFor="let t of todos"
+    [todoTitle]="t.title"
+    [todoText]="t.completed ? 'completed' : 'in progress'"
+  ></app-todo>
 </section>

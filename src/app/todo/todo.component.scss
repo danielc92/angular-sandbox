@@ -1,11 +1,12 @@
 .todo {
+  font-family: sans-serif;
   display: block;
   margin-bottom: 1rem;
   background: white;
   color: navy;
   padding: 0.6rem 1rem;
   border: 2px solid navy;
-  width: 400px;
+  max-width: 800px;
   box-sizing: border-box;
 
   &__tag {
@@ -14,6 +15,7 @@
     margin-right: 0.2rem;
   }
   h3 {
+    text-transform: capitalize;
     margin: 0 0 0.75rem 0;
     font-weight: bold;
     font-size: 1.8rem;

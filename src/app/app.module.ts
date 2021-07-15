@@ -8,7 +8,7 @@ import { AboutUsPageComponent } from './about-us-page/about-us-page.component';
 import { TodoListPageComponent } from './todo-list-page/todo-list-page.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ButtonComponent } from './button/button.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +18,7 @@ import { ButtonComponent } from './button/button.component';
     ProfileComponent,
     ButtonComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
