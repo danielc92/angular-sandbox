@@ -1,0 +1,19 @@
+$button-bg: rgb(73, 73, 207);
+$button-bg-hover: rgb(85, 85, 221);
+.button {
+  padding: 0.4rem 0.6rem;
+  background: $button-bg;
+  color: #fff;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 0px rgba(81, 103, 223, 0.479);
+  cursor: pointer;
+
+  &:hover {
+    background: $button-bg-hover;
+  }
+}
