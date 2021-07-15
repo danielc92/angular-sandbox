@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Observable, throwError } from 'rxjs';
+import { Observable } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
+import { HandleError, HttpErrorHandler } from '../http-error-handler.service';
 
 export interface Todo {
   userId: number;
@@ -14,27 +15,16 @@ export interface Todo {
 @Injectable()
 export class TodosService {
   baseUrl = 'https://jsonplaceholder.typicode.com';
+  private handleError: HandleError;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, httpErrorHandler: HttpErrorHandler) {
+    this.handleError = httpErrorHandler.createHandleError('TodosService');
+  }
 
   /** GET heroes from the server */
   getTodos(): Observable<Todo[]> {
     return this.http
       .get<Todo[]>(this.baseUrl + '/todos')
-      .pipe(retry(2), catchError(this.handleError));
-  }
-
-  // Error handling
-  handleError(error: any) {
-    let errorMessage = '';
-    if (error.error instanceof ErrorEvent) {
-      // Get client-side error
-      errorMessage = error.error.message;
-    } else {
-      // Get server-side error
-      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
-    }
-    window.alert(errorMessage);
-    return throwError(errorMessage);
+      .pipe(retry(2), catchError(this.handleError('getTodos', [])));
   }
 }
