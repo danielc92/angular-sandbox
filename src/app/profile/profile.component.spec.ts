@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 import { ProfileComponent } from './profile.component';
 
@@ -8,9 +9,9 @@ describe('ProfileComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProfileComponent ]
-    })
-    .compileComponents();
+      imports: [RouterModule.forRoot([])],
+      declarations: [ProfileComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
