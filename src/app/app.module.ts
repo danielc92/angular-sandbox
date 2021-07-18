@@ -11,6 +11,7 @@ import { ButtonComponent } from './button/button.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ImageCardComponent } from './image-card/image-card.component';
 import { PipesPageComponent } from './pipes-page/pipes-page.component';
+import { CubePipe } from './cube.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import { PipesPageComponent } from './pipes-page/pipes-page.component';
     ButtonComponent,
     ImageCardComponent,
     PipesPageComponent,
+    CubePipe,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
