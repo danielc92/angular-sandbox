@@ -1,0 +1,10 @@
+<section>
+  <button (click)="handleClick()">click me</button>
+  <input
+    placeholder="enter some text"
+    name="my input"
+    (keyup)="handleKeyUp($event)"
+    [value]="value"
+  />
+  <p>current value is {{ value }}</p>
+</section>

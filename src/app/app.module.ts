@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ImageCardComponent } from './image-card/image-card.component';
 import { PipesPageComponent } from './pipes-page/pipes-page.component';
 import { CubePipe } from './cube.pipe';
+import { EventsComponent } from './events/events.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { CubePipe } from './cube.pipe';
     ImageCardComponent,
     PipesPageComponent,
     CubePipe,
+    EventsComponent,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
