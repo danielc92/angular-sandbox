@@ -13,6 +13,7 @@ import { ImageCardComponent } from './image-card/image-card.component';
 import { PipesPageComponent } from './pipes-page/pipes-page.component';
 import { CubePipe } from './cube.pipe';
 import { EventsComponent } from './events/events.component';
+import { ConditionalsComponent } from './conditionals/conditionals.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { EventsComponent } from './events/events.component';
     PipesPageComponent,
     CubePipe,
     EventsComponent,
+    ConditionalsComponent,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],

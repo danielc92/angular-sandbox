@@ -1,0 +1,19 @@
+<section>
+  <div *ngIf="showMessage; else elseBlock" class="box">
+    <h3>if box</h3>
+    <p>shows when <code>showMessage</code> is <code>true</code></p>
+  </div>
+
+  <ng-template #elseBlock>
+    <div class="box">
+      <h3>else box</h3>
+      <p>shows when <code>showMessage</code> is <code>false</code></p>
+    </div>
+  </ng-template>
+
+  <div [ngSwitch]="switchValue" class="box">
+    <h3 *ngSwitchCase="'red'">stop moving</h3>
+    <h3 *ngSwitchCase="'orange'">be cautious</h3>
+    <h3 *ngSwitchCase="'green'">keep moving</h3>
+  </div>
+</section>
